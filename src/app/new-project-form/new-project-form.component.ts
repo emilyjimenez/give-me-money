@@ -10,14 +10,12 @@ import { NgForm } from '@angular/forms';
   providers: [ProjectService]
 })
 export class NewProjectFormComponent {
+  // This is a work around since we were having troubles getting the value for category to properly select. We created a default dummy value object in new-project-form.ts for Technology that can change when you select another category
   categoryChoice: string ="Technology";
   constructor(private projectService: ProjectService) { }
 
-
   submitForm(title: string, description: string, organizers: string, goal: number,perks: string) {
-    console.log(this.categoryChoice);
     var newProject: Project = new Project(title, description, organizers, goal, this.categoryChoice, perks);
-
     this.projectService.addProject(newProject);
   }
 }
