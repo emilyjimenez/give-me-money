@@ -1,0 +1,10 @@
+{ "projects": [{
+    "title": "Fund My Cat VR Game",
+    "description": "Building a VR game that virtually transports you into the life of a cat. Purr, chase mice, and knock things over like all cats do!",
+    "organizers": "Sir Purs A Lot",
+    "goal": 1000000,
+    "category": "Technology",
+    "perks": "stuff",
+    "id": "1"
+  }]
+}

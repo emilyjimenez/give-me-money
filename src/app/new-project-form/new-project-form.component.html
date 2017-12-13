@@ -1,0 +1,43 @@
+<h3>Add New Project to Fund</h3>
+<div>
+  <div>
+    <label>Project Title:</label>
+    <br>
+    <input #newTitle>
+  </div>
+
+  <div>
+    <label> Description:</label>
+    <br>
+    <textarea #newDescription></textarea>
+  </div>
+
+  <div>
+    <label> Organizer(s):</label>
+    <br>
+    <input #newOrganizers>
+  </div>
+
+  <div>
+    <label> Goal:</label>
+    <br>
+    <input #newGoal>
+  </div>
+
+  <div class="radio">
+    <label><input type="radio" name="Technology" #newCategory>Technology</label>
+  </div>
+  <div class="radio">
+    <label><input type="radio" name="Non-Profit" #newCategory>Non-Profit</label>
+  </div>
+  <div class="radio">
+    <label><input type="radio" name="Product-Development" #newCategory>Product Development</label>
+  </div>
+
+  <div>
+    <label>Perks:</label>
+    <br>
+    <input #newPerks>
+  </div>
+  <button (click)="submitForm(newTitle.value, newDescription.value, newOrganizers.value, newGoal.value, newCategory.value, newPerks.value)" newTitle.value=''; newDescription.value=''; newOrganizers.value=''; newGoal.value=''; newCategory.value=''; newPerks.value=''">Add</button>
+</div>
