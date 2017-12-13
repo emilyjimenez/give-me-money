@@ -1,6 +1,3 @@
-<p>
-  marketplace works!
-</p>
 <div *ngFor="let project of projects | async" (click)="goToDetailPage(project)" class="panel panel-default">
   <div class="panel-body">
     <h3><em>{{project.title}}</em> by {{project.organizers}}</h3>

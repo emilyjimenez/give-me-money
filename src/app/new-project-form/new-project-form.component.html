@@ -1,43 +1,43 @@
 <h3>Add New Project to Fund</h3>
 <div>
-  <div>
+  <div class="form-group">
     <label>Project Title:</label>
     <br>
     <input #newTitle>
   </div>
 
-  <div>
+  <div class="form-group">
     <label> Description:</label>
     <br>
     <textarea #newDescription></textarea>
   </div>
 
-  <div>
+  <div class="form-group">
     <label> Organizer(s):</label>
     <br>
     <input #newOrganizers>
   </div>
 
-  <div>
+  <div class="form-group">
     <label> Goal:</label>
     <br>
-    <input #newGoal>
+    <input #newGoal type="number">
   </div>
 
+  <div class="form-group">
+  <label>Category</label>
   <div class="radio">
-    <label><input type="radio" name="Technology" #newCategory>Technology</label>
+  <label><input type="radio" value="Technology" name="newCategory"  [(ngModel)]="categoryChoice"> Technology</label>
+  <label><input type="radio" value="Non-Profit" name="newCategory"  [(ngModel)]="categoryChoice"> Non-Profit</label>
+  <label><input type="radio" value="Product-Development" name="newCategory"  [(ngModel)]="categoryChoice">Product Development</label>
   </div>
-  <div class="radio">
-    <label><input type="radio" name="Non-Profit" #newCategory>Non-Profit</label>
-  </div>
-  <div class="radio">
-    <label><input type="radio" name="Product-Development" #newCategory>Product Development</label>
   </div>
 
-  <div>
+
+  <div class="form-group">
     <label>Perks:</label>
     <br>
     <input #newPerks>
   </div>
-  <button (click)="submitForm(newTitle.value, newDescription.value, newOrganizers.value, newGoal.value, newCategory.value, newPerks.value)" newTitle.value=''; newDescription.value=''; newOrganizers.value=''; newGoal.value=''; newCategory.value=''; newPerks.value=''">Add</button>
+  <button (click)="submitForm(newTitle.value, newDescription.value, newOrganizers.value, newGoal.value, newPerks.value); newTitle.value=''; newDescription.value=''; newOrganizers.value=''; newGoal.value=''; newPerks.value=''">Add</button>
 </div>
