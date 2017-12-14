@@ -5,7 +5,7 @@ import { MarketplaceComponent } from './marketplace/marketplace.component';
 import { ProjectDetailsComponent } from './project-details/project-details.component';
 import { NewProjectFormComponent } from './new-project-form/new-project-form.component';
 import { FundFormComponent } from './fund-form/fund-form.component';
-import { AdminComponent } from './admin/admin.component'
+import { AdminComponent } from './admin/admin.component';
 
 const appRoutes: Routes = [
   {

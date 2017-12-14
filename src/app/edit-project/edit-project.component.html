@@ -1,0 +1,45 @@
+<h5>Edit Project</h5>
+<div>
+  <div class="form-group">
+    <label>Project Title:</label>
+    <br>
+    <input [(ngModel)]="selectedProject.title">
+  </div>
+
+  <div class="form-group">
+    <label> Description:</label>
+    <br>
+    <textarea [(ngModel)]="selectedProject.description"></textarea>
+  </div>
+
+  <div class="form-group">
+    <label> Organizer(s):</label>
+    <br>
+    <input [(ngModel)]="selectedProject.organizers">
+  </div>
+
+  <div class="form-group">
+    <label> Goal:</label>
+    <br>
+    <input [(ngModel)]="selectedProject.goal" type="number">
+  </div>
+
+  <!-- This is a work around since we were having troubles getting the value for category to properly select. We created a default dummy value object in new-project-form.ts for Technology that can change when you select another category. -->
+  <div class="form-group">
+  <label>Category</label>
+  <div class="radio">
+  <label><input type="radio" value="Technology" name="newCategory"  [(ngModel)]="editCategoryChoice"> Technology</label>
+  <label><input type="radio" value="Non-Profit" name="newCategory"  [(ngModel)]="editCategoryChoice"> Non-Profit</label>
+  <label><input type="radio" value="Product-Development" name="newCategory"  [(ngModel)]="editCategoryChoice">Product Development</label>
+  <label><input type="radio" value="Other" name="newCategory"  [(ngModel)]="editCategoryChoice">Other</label>
+  </div>
+  </div>
+
+
+  <div class="form-group">
+    <label>Perks:</label>
+    <br>
+    <textarea [(ngModel)]="selectedProject.perks"></textarea>
+  </div>
+  <button class="btn btn-info" (click)="beginUpdatingProject(selectedProject)">Update</button>
+</div>

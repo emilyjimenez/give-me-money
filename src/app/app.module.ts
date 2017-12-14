@@ -13,6 +13,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { EditProjectComponent } from './edit-project/edit-project.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -29,7 +30,8 @@ export const firebaseConfig = {
     FundFormComponent,
     NewProjectFormComponent,
     AdminComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    EditProjectComponent
   ],
   imports: [
     BrowserModule,
