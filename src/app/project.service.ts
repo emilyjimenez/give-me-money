@@ -32,4 +32,10 @@ export class ProjectService {
       perks: localUpdatedProject.perks
     })
   }
+
+  deleteProject(localProjectToDelete) {
+    var projectEntryInFirebase = this.getProjectById(localProjectToDelete.$key);
+    projectEntryInFirebase.remove();
+  }
+
 }

@@ -12,6 +12,7 @@ import { ProjectService } from '../project.service';
   providers: [ProjectService]
 })
 export class ProjectDetailsComponent implements OnInit {
+
   projectId: string;
   projectToDisplay;
   constructor(
@@ -26,4 +27,5 @@ export class ProjectDetailsComponent implements OnInit {
     });
     this.projectToDisplay = this.projectService.getProjectById(this.projectId);
   }
+
 }

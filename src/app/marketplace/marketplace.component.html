@@ -1,6 +1,6 @@
 <div *ngFor="let project of projects | async" class="panel panel-default">
   <div class="panel-body">
-    <h3 (click)="goToDetailPage(project)"><em>{{project.title}}</em> by {{project.organizers}}</h3>&nbsp;<h5> <font color="green">{{project.category}}</font></h5>
+    <h3 (click)="goToDetailPage(project)"><em>{{project.title}}</em> by {{project.organizers}}</h3>&nbsp;<h5> <div class="category">{{project.category}}</div></h5>
     <div *ngIf="currentRoute === '/admin'">
       <p>{{project.description}}</p>
       <ul>

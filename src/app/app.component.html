@@ -1,22 +1,26 @@
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" routerLink="">Home</a>
+<div class="background-image">
+  <nav class="navbar">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" routerLink="">Home</a>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a routerLink="new-project">Create New Project</a></li>
+        <li><a routerLink="marketplace">Current Projects</a></li>
+      </ul>
     </div>
-    <ul class="nav navbar-nav navbar-right">
-      <li><a routerLink="new-project">Create New Project</a></li>
-      <li><a routerLink="marketplace">Current Projects</a></li>
-    </ul>
-  </div>
-</nav>
+  </nav>
 
-<div class="container">
-  <h1>{{title}}</h1>
-  <router-outlet></router-outlet>
-</div>
-
-<footer class="footer">
   <div class="container">
-    <a class="text-muted" routerLink="admin">Admin</a>
+    <div class="filter">
+      <h1>{{title}}</h1>
+      <router-outlet></router-outlet>
+    </div>
   </div>
-</footer>
+
+  <footer class="footer">
+
+      <a routerLink="admin">Admin</a>
+
+  </footer>
+</div>
