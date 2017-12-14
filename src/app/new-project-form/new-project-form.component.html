@@ -31,6 +31,7 @@
   <label><input type="radio" value="Technology" name="newCategory"  [(ngModel)]="categoryChoice"> Technology</label>
   <label><input type="radio" value="Non-Profit" name="newCategory"  [(ngModel)]="categoryChoice"> Non-Profit</label>
   <label><input type="radio" value="Product-Development" name="newCategory"  [(ngModel)]="categoryChoice">Product Development</label>
+  <label><input type="radio" value="Other" name="newCategory"  [(ngModel)]="categoryChoice">Other</label>
   </div>
   </div>
 
@@ -38,7 +39,7 @@
   <div class="form-group">
     <label>Perks:</label>
     <br>
-    <input #newPerks>
+    <textarea #newPerks></textarea>
   </div>
   <button (click)="submitForm(newTitle.value, newDescription.value, newOrganizers.value, newGoal.value, newPerks.value); newTitle.value=''; newDescription.value=''; newOrganizers.value=''; newGoal.value=''; newPerks.value=''">Add</button>
 </div>

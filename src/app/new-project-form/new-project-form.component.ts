@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ProjectService } from '../project.service';
 import { Project } from '../project.model';
-import { NgForm } from '@angular/forms';
+
 
 @Component({
   selector: 'app-new-project-form',
